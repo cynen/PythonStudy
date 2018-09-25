@@ -14,7 +14,10 @@ class Stack(object):
         return self.__list.pop() # 弹出最后的一个元素.
     def peek(self):
         '''返回栈顶元素'''
-        return self.__list[-1] #
+        if self.is_empty():
+            return None
+        else:
+            return self.__list[-1] #返回列表的最后一个元素.
 
     def is_empty(self):
         '''判断栈是否为空'''

@@ -16,7 +16,7 @@ class Queue(object):
             return self.__items.pop() # 弹出第一个元素.
             #return self.__items.pop(0)  # 弹出第一个元素.
         else:
-            return ;
+            return None;
 
     def is_empty(self):
         '''判断一个队列是否为空'''
