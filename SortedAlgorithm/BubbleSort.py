@@ -22,8 +22,9 @@ def bubleSort(list):
         for i in range(j):
             # 下一次循环处理的元素个数比上一次递减1,最大值已经确定,并且至于list末尾.
             # 故,只需要比较剩余个数.
+            # [0,j)
             if list[i] > list[i + 1]:
-                list[i], list[i + 1] = list[i + 1], list[i]
+                list[i], list[i + 1] = list[i + 1], list[i]  #交换变量
     return list
 
 
