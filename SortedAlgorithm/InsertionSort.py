@@ -33,5 +33,3 @@ def insertSort2(list):
 list = [9,6,4,2,7,1,8]
 ll = insertSort2(list)
 print(ll)
-
-print([i for i in range(5,-1,-1)])
