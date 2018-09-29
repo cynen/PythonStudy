@@ -17,6 +17,10 @@ pygame库的使用.
 Python基础语法的熟悉.
 
 
+运行方法:
+直接运行 PlaneWar-V1.0 的AppStart.py文件即可.
+
+
 
 
 
