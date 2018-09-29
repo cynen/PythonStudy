@@ -43,7 +43,7 @@ def quickSort(list,start,end):
     quickSort(list,low+1,end);
 
 
-list = [54,26,93,17,77,31,44,55,20]
+list = [54,26,93,17,77,31,44,55,20,37]
 print(list)
 quickSort(list,0,len(list)-1)
 print(list)
