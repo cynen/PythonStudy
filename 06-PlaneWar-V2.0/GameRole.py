@@ -43,12 +43,38 @@ class BackGround(GameSprite):
         if self.rect.y > SCREEN_RECT.height:
             self.rect.bottom = 0
 
+class BackGroundBoot(GameSprite):
+    """背景精灵"""
+    def __init__(self,alt=False,image="./images/bg00.jpg"):
+        super().__init__(image)
+        if alt:
+            #两张图片轮播,第二张图片需要在第一张图片上方,
+            self.rect.y = -self.rect.height
+
+    def update(self):
+        super().update()
+        self.speed = 2
+        #越界检查,如果移出边界,立即移动到替换图片位置
+        if self.rect.y > SCREEN_RECT.height:
+            self.rect.bottom = 0
+class BackGroundPic(GameSprite):
+    """背景精灵"""
+    def __init__(self,image="./images/start.png"):
+        super().__init__(image,speed=0)
+        self.rect.x = 0
+        self.rect.y = 100
+    def update(self):
+        # super().update()
+        #越界检查,如果移出边界,立即移动到替换图片位置
+        if self.rect.y > SCREEN_RECT.height:
+            self.rect.bottom = 0
+
 
 class Hero(GameSprite):
     """英雄飞机"""
-    def __init__(self):
+    def __init__(self,image="./images/me1.png"):
         # 1. 调用父类方法，设置image&speed,因为英雄飞机是水平移动,所以该speed需要设置成0
-        super().__init__("./images/me1.png",0)
+        super().__init__(image,0)
         self.rect.centerx = SCREEN_RECT.centerx  # 通过rect的中心直接获得.
         self.rect.bottom = SCREEN_RECT.bottom - self.rect.height #获得y的中心值
 
