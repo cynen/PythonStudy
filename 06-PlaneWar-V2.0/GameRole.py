@@ -66,10 +66,17 @@ class Hero(GameSprite):
         print("英雄飞机被销毁...")
 
     def shoot(self):
-        bullet = Bullet()
-        bullet.rect.x = self.rect.centerx
-        bullet.rect.y = self.rect.y
-        self.bullets.add(bullet)
+        # bullet = Bullet()
+        # bullet.rect.x = self.rect.centerx
+        # bullet.rect.y = self.rect.y
+        # self.bullets.add(bullet)
+        # 一次发射多发子弹
+        for i in (0,1):
+            bullet = Bullet()
+            bullet.rect.x = self.rect.centerx
+            bullet.rect.y = (self.rect.y - i*20) # 设置子弹的初始位置.
+            self.bullets.add(bullet)
+
 
 class Enemy(GameSprite):
     """敌机精灵"""
@@ -94,7 +101,7 @@ class Enemy(GameSprite):
 class Bullet(GameSprite):
     """子弹类"""
     def __init__(self):
-        super().__init__("./images/bullet1.png",-2)
+        super().__init__("./images/bullet1.png",-3)
 
     def update(self):
         super().update()
