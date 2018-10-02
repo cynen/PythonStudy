@@ -141,6 +141,7 @@ class PlaneGame(object):
         exit(0)
     def start_game(self):
         print("开始游戏...")
+        # 挖坑,后续待填!!!
         # self.flag2 = True
         # while self.flag2:
         # # self.bootGame()
@@ -169,7 +170,7 @@ class PlaneGame(object):
             pygame.display.update()
 
     def bootGame(self):
-        """启动游戏界面,失败..."""
+        """启动游戏界面,实验失败..."""
         bg = BackGround("./ui/bg00.jpg")
         self.bgGroup.add(bg)
         self.bgGroup.update()
