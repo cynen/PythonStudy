@@ -14,7 +14,7 @@ class HeroPlane(object):
         self.y = 600
         self.screen = screen
         self.imageName = "./image/hero.gif"
-        self.image = pygame.image.load(self.imageName).convert()
+        self.image = pygame.image.load(self.imageName)
 
         self.bullets = []
 

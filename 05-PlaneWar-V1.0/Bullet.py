@@ -12,11 +12,11 @@ class Bullet(object):
         self.screen = screen
         self.type = type
         if self.type == 1:
-            self.image = pygame.image.load("./image/bullet-1.gif").convert()
+            self.image = pygame.image.load("./image/bullet-1.gif")
         # elif self.type == 2:
         #     self.image = pygame.image.load("./image/bullet-2.gif").convert()
         elif self.type == 2:
-            self.image = pygame.image.load("./image/bullet-3.gif").convert()
+            self.image = pygame.image.load("./image/bullet-3.gif")
 
         self.count = 1
     def move(self):

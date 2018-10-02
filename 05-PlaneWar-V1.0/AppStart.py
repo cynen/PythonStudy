@@ -4,6 +4,7 @@ import pygame
 from pygame.locals import *
 from HeroPlane import HeroPlane
 from EnemyPlane import EnemyPlane
+
 """
     游戏入口.
 """
@@ -15,15 +16,18 @@ from EnemyPlane import EnemyPlane
 if __name__ == "__main__":
     # sys.path.append(".")
     #1.创建一个主界面.
-    screen = pygame.display.set_mode((480,890),0,32)
+    screen = pygame.display.set_mode((480,850),0,32)
     #2.创建背景图片
-    background = pygame.image.load("./image/background.png").convert()
+    background = pygame.image.load("./image/background.png")
 
     hero = HeroPlane(screen)
     enemy = EnemyPlane(screen)
     # bullet = Bullet(screen,30,30)
+    #创建时钟对象
+    clock = pygame.time.Clock()
     #3.显示
     while True:
+        clock.tick(60) # 参数的含义: 每秒钟最大帧数.
         # 初始化主界面.
         screen.blit(background,(0,0))
         hero.display()

@@ -14,7 +14,7 @@ class EnemyPlane(object):
         self.y = 1
         self.screen = screen
         self.imageName = "./image/enemy-1.gif"
-        self.image = pygame.image.load(self.imageName).convert()
+        self.image = pygame.image.load(self.imageName)
         self.redirect = "left"
         self.bullets = []
         self.count = 1
